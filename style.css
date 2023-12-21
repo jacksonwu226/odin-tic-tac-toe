@@ -1,5 +1,9 @@
 :root{
-    --font-size: 20px;
+    --font-size: 2rem;
+    --title-font-size: 3rem;
+    --grid-gap-size: .5rem;
+    --game-desc-size: 2.5rem;
+    --main-content-gap: 2.5rem;
 }
 *{
     margin: 0;
@@ -23,7 +27,9 @@ body{
     width: 100%;
     margin: 0;
 }
-
+.header > h1{
+    font-size: var(--title-font-size);
+}
 /* Footer */
 .footer{
     left: 0;
@@ -34,7 +40,38 @@ body{
     background-color: white;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
-
-.tic-tac-toe-grid{
-    
+.main-content{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: column;
+    gap: var(--main-content-gap);
+    padding-top: 3rem;
+}
+.main-content > .tic-tac-toe-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: var(--grid-gap-size);
+    border: var(--grid-gap-size) solid black;
+    background-color: black;
+}
+.tic-tac-toe-field{
+    background-color: white;
+}
+.main-content #round-description{
+    font-size: var(--game-desc-size);
+}
+.main-content #restart-btn{
+    font-size: var(--font-size);
+    background-color: white;
+    border: 2px solid black;
+    padding: 1rem;
+    width: 300px;
+    border-radius: 1rem;
+}
+.tic-tac-toe-field:hover{
+    background-color: lightgray;
 }
