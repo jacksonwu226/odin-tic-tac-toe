@@ -2,7 +2,7 @@
     --font-size: 2rem;
     --title-font-size: 3rem;
     --grid-gap-size: .5rem;
-    --game-desc-size: 2.5rem;
+    --round-desc-size: 2.5rem;
     --main-content-gap: 2.5rem;
 }
 *{
@@ -60,9 +60,13 @@ body{
 }
 .tic-tac-toe-field{
     background-color: white;
+    font-size: var(--font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .main-content #round-description{
-    font-size: var(--game-desc-size);
+    font-size: var(--round-desc-size);
 }
 .main-content #restart-btn{
     font-size: var(--font-size);
@@ -72,6 +76,7 @@ body{
     width: 300px;
     border-radius: 1rem;
 }
-.tic-tac-toe-field:hover{
+.tic-tac-toe-field:hover,
+.main-content #restart-btn:hover{
     background-color: lightgray;
 }
