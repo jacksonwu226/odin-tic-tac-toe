@@ -4,11 +4,13 @@
     --grid-gap-size: .5rem;
     --round-desc-size: 2.5rem;
     --main-content-gap: 2.5rem;
+    --token-size: 4rem;
 }
 *{
     margin: 0;
     padding: 0;
     border: none;
+    font-family: "Permanent Marker", cursive;
 }
 body{
     background-color: rgb(233, 233, 233);
@@ -60,10 +62,12 @@ body{
 }
 .tic-tac-toe-field{
     background-color: white;
-    font-size: var(--font-size);
+    font-size: var(--token-size);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    transition: 0.3s;
 }
 .main-content #round-description{
     font-size: var(--round-desc-size);
@@ -75,8 +79,11 @@ body{
     padding: 1rem;
     width: 300px;
     border-radius: 1rem;
+    transition: 0.3s;
 }
 .tic-tac-toe-field:hover,
 .main-content #restart-btn:hover{
     background-color: lightgray;
+    cursor: pointer;
+    transition: 0.3s;
 }
